@@ -71,11 +71,11 @@ Fun facts/ more info:
 
 *The alert bell system:  10 bells for a Warning; 5 for a Watch; and 4 for an Advisory, statement or anything else.
 
-*The format of the bulletins have been coded to look almost exactly how they originally appeared on the old Weather Service wire back in the day.
+*The format of the bulletins have been coded to look almost exactly how they originally appeared on the old Weather Service wire back in the day!
 
 *The script will only print each new alert received only once.
 
-*With a 5v power relay tied in with your Teletype setup (and depending on the setup), this script will automatically turn on your Teletype before and off after a weather alert/bulletin is received/printed!
+*With a 5v power relay tied in with your Teletype setup (and depending on the setup), this script will automatically turn on your Teletype before and off after a weather alert/bulletin is received/printed.
 
 *Do not change the requests.auth script anymore than what is described above.  This API key script is very picky and may not work / may cause IP blocks, if changed in any other way.
 
