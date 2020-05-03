@@ -71,7 +71,7 @@ Fun facts/ more info:
 
 *The alert bell system:  10 bells for a Warning; 5 for a Watch; and 4 for an Advisory, statement or anything else.
 
-*The format of the bulletins have coded to look almost exactly how they originally appeared on the old Weather Service wire back in the day.
+*The format of the bulletins have been coded to look almost exactly how they originally appeared on the old Weather Service wire back in the day.
 
 *The script will only print each new alert received only once.
 
