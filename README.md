@@ -55,6 +55,8 @@ If you do not have a relay - Please comment out lines 7, 8, 106, 107, 114, 115, 
 
 With this, you should be all ready to go!
 
+*The README.md and _config.yml files - after download, may be deleted... these are extra github files that are unnecessary.
+
 
 
 Fun facts/ more info:
