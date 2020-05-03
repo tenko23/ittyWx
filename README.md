@@ -84,4 +84,4 @@ ittyWx (Internet Weather for Teletype)
 GNU GLPv3
 
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](id=YCZR9Z9548QLU)
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](YCZR9Z9548QLU)
