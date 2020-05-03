@@ -73,6 +73,8 @@ Fun facts/ more info:
 
 *The script will only print each new alert received only once.
 
+*With a 5v power relay tied in with your Teletype setup (and depending on the setup), this script will automatically turn on your Teletype before and off after a weather alert/bulletin is received/printed!
+
 *Do not change the requests.auth script anymore than what is described above.  This API key script is very picky and may not work / may cause IP blocks, if changed in any other way.
 
 *This software is free to use... but please do consider a donation for the development of this software (and for any potential future software development geared towards Teletype).  Also, if any bugs are found, please contact me.
