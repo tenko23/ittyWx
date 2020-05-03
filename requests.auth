@@ -1,0 +1,8 @@
+import requests
+
+response = s.get("https://api.weather.gov/alerts/active/zone/NEC109",
+  headers={
+    "X-RapidAPI-Host": "api.weather.gov",
+    "X-RapidAPI-Key": ""
+  }
+)
