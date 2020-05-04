@@ -63,7 +63,7 @@ Fun facts/ more info:
 
 *ittyWx.py is the main script to run, to get weather bulletins... the other files are support files.
 
-*With a web scrape at every 3.7 seconds, it will keep you below the 1,000/hour threshold with the NWS (as long as you have an API key registered with them).
+*With a web scrape at every 3.7 seconds, it will keep you below the 1,000/hour threshold with the NWS (as long as you have an API key registered with them).  To decrease the frequency of scrapes, increase the number in parentheses on line 120 - in the ittyWx.py script, to anything above 3.7 (in minutes).
 
 *This script will automatically back off of the frequency of requests - for a time, if a variety of network error codes are received.
 
