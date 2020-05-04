@@ -85,6 +85,7 @@ Fun facts/ more info:
 
 
 ittyWx (Internet Weather for Teletype)
+tenko23
 GNU GPLv3
 
 
