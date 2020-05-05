@@ -57,6 +57,8 @@ With this, you should be all ready to go!
 
 *The README.md and _config.yml files - after download, may be deleted... these are extra github files that are unnecessary.
 
+*if you downloaded the script(s) prior to May 5th, 2020, you will need to download the itty.py script again.  A critical fix has been made.
+
 
 
 Fun facts/ more info:
