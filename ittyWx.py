@@ -21,7 +21,7 @@ def garbage():
     time.sleep(0.5)
     gc.collect(generation=2)
     time.sleep(0.5)
-    run_at = now + timedelta(minutes=30)  #Increase the frequency of garbage collection - if needed, here.
+    run_at = now + timedelta(minutes=45)  #Increase the frequency of garbage collection - if needed, here.
     delay = (run_at - now).total_seconds()
     print("\nFreeing memory (generation 2)\n")
     threading.Timer(delay, garbage).start()
