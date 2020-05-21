@@ -18,7 +18,7 @@ https://api.data.gov/signup/
 
 https://alerts.weather.gov/
 
-...scroll down, find the state you want, click on the "counties" link to the right and that will lead you to the counties page for that state.  Next, find the county / county code, copy/paste the code in the following two locations:
+...scroll down, find the state you want, click on the "counties" link to the right and that will lead you to the counties page for that state.  Next, find the county / county code and copy/paste the code in the following two locations:
 
 A - In ittyWx.py , paste it at the end of the link on line 40 (replacing the code that's already there), before the end of the first set of quotation marks.
 
@@ -63,11 +63,11 @@ Fun facts/ more info:
 
 *ittyWx.py is the main script to run, to get weather bulletins... the other files are support files.
 
-*With a web scrape at every 3.7 seconds, it will keep you below the 1,000/hour threshold with the NWS (as long as you have an API key registered with them).  To decrease the frequency of scrapes, increase the number in parentheses on line 120 - in the ittyWx.py script, to anything above 3.7 (in minutes).
+*With a web scrape at every 3.7 seconds, it will keep you below the 1,000/hour threshold with the NWS (as long as you have an API key registered with them).  To decrease the frequency of scrapes, increase the number in parentheses on line 120 - in the ittyWx.py script, to anything above 3.7 (in seconds).
 
 *This script will automatically back off of the frequency of requests - for a time, if a variety of network error codes are received.
 
-*The script has a coded-in garbage collector.  With constant running, the small RAM space on some Raspberry Pis can get bogged down pretty fast - thus, the garbage collector freeing up a bit of space every 30 minutes.  If your Raspberry Pi begins to become unresponsive after running this script for a time - or if you get an error that the script was expecting something but instead got something else (numbers), it might be worth increasing the frequency of collection.  This will be a lower number (in minutes) on line 24, in the ittyWx.py script (current default is 30 minutes).
+*The script has a coded-in garbage collector.  With constant running, the small RAM space on some Raspberry Pis can get bogged down pretty fast - thus, the garbage collector freeing up a bit of space every 45 minutes.  If your Raspberry Pi begins to become unresponsive after running this script for a time - or if you get an error that the script was expecting something but instead got something else (numbers), it might be worth increasing the frequency of collection.  This will be a lower number (in minutes) on line 24, in the ittyWx.py script (current default is 30 minutes).
 
 *The alert bell system:  10 bells for a Warning; 5 for a Watch; and 4 for an Advisory, statement or anything else.
 
