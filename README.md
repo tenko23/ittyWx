@@ -65,7 +65,7 @@ With this, you should be all ready to go!
 
 Fun facts/ more info:
 
-*ittyWx.py is the main script to run, to get weather bulletins... the other files are support files.
+*ittyWx.py is the main script to run, to get weather bulletins... the other files are support files.  The example_circuit_box_setup_photos folder may also be deleted.
 
 *With a web scrape at every 3.7 seconds, it will keep you below the 1,000/hour threshold with the NWS (as long as you have an API key registered with them).  To decrease the frequency of scrapes, increase the number in parentheses on line 120 - in the ittyWx.py script, to anything above 3.7 (in seconds).
 
