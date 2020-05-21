@@ -51,7 +51,7 @@ If you do not have a relay - Please comment out lines 7, 8, 106, 107, 114, 115, 
 
 With this, you should be all ready to go!
 
-*The README.md and _config.yml files - after download, may be deleted... these are extra github files that are unnecessary.
+*The README.md and _config.yml files - after download, may be deleted... these are extra github files that are unnecessary.  The example_circuit_box_setup_photos folder may also be deleted.
 
 *The extra_scripts folder contains one script-each for manually turning on and off the 5v power relay on your Raspberry Pi (if equipped... this would come in handy if you wanted to manually type on your Teletype's keyboard or to run a tape reader, for example).  Please make sure the GPIO pin number is correct on line 6 in the ManRelayOn.py script and on line 8 in the ManRelayOff.py script.
 
