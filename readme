@@ -53,7 +53,9 @@ With this, you should be all ready to go!
 
 *The README.md and _config.yml files - after download, may be deleted... these are extra github files that are unnecessary.
 
-*if you downloaded the script(s) prior to May 5th, 2020, you will need to download the itty.py script again.  A critical fix has been made.
+*The extra_files folder contains one script-each for manually turning on and off the 5v power relay on your Raspberry Pi (if equipped... this would come in handy if you wanted to manually type on your Teletype's keyboard or to run a tape reader, for example).  Please make sure the GPIO pin number is correct on line 6 in the ManRelayOn.py script and on line 8 in the ManRelayOff.py script.
+
+*If you downloaded the script(s) prior to May 5th, 2020, you will need to download the itty.py script again.  A critical fix has been made. 
 
 
 
@@ -65,7 +67,7 @@ Fun facts/ more info:
 
 *This script will automatically back off of the frequency of requests - for a time, if a variety of network error codes are received.
 
-*The script has a coded-in garbage collector.  With constant running, the small RAM space on some Raspberry Pis can get bogged down pretty fast - thus, the garbage collector freeing up a bit of space every 45 minutes.  If your Raspberry Pi begins to become unresponsive after running this script for a time - or if you get an error that the script was expecting something but instead got something else (numbers), it might be worth increasing the frequency of collection.  This will be a lower number (in minutes) on line 24, in the ittyWx.py script (current default is 30 minutes).
+*The script has a coded-in garbage collector.  With constant running, the small RAM space on some Raspberry Pis can get bogged down pretty fast - thus, the garbage collector freeing up a bit of space every 30 minutes.  If your Raspberry Pi begins to become unresponsive after running this script for a time - or if you get an error that the script was expecting something but instead got something else (numbers), it might be worth increasing the frequency of collection.  This will be a lower number (in minutes) on line 24, in the ittyWx.py script (current default is 30 minutes).
 
 *The alert bell system:  10 bells for a Warning; 5 for a Watch; and 4 for an Advisory, statement or anything else.
 
