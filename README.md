@@ -50,7 +50,7 @@ dmesg | grep tty
 
 If you have a relay - Please make sure the GPIO pin number is correct on line 6 in the RelayOn.py script and on line 8 in the RelayOff.py script.
 
-If you do not have a relay - Please comment out lines 7, 8, 106, 107, 114, 115, 116, 117 and 118 in the ittyWx.py script.  You will have to have your Teletype on, in order to receive bulletins as they come along.
+If you do not have a relay or have an idle line motor control unit in place - Please comment out lines 7, 8, 106, 107, 114, 115, 116, 117 and 118 in the ittyWx.py script.  You will have to have your Teletype on, in order to receive bulletins as they come along.
 
 
 With this, you should be all ready to go!
