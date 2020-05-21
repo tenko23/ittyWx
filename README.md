@@ -57,6 +57,8 @@ With this, you should be all ready to go!
 
 *The README.md and _config.yml files - after download, may be deleted... these are extra github files that are unnecessary.
 
+*The extra_files folder contains one script-each for manually turning on and off the 5v power relay on your Raspberry Pi (if equipped... this would come in handy if you wanted to manually type on your Teletype's keyboard or to run a tape reader, for example).  Please make sure the GPIO pin number is correct on line 6 in the ManRelayOn.py script and on line 8 in the ManRelayOff.py script.
+
 *if you downloaded the script(s) prior to May 5th, 2020, you will need to download the itty.py script again.  A critical fix has been made.
 
 
