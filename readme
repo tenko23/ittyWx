@@ -33,16 +33,32 @@ i - Follow most of step A (above), except the line you will use will be 41 in th
 ii - Copy the entire link between the first set of quotation marks on line 41, in the ittyWx.py script and paste it - replacing the entire link between the quotation marks on line 3, in the requests.auth script.
 
 
-3 - Please make sure your Volpe board serial address is correct.
+3 - You will need to install additional packages onto your Raspberry Pi, in order for things to work properly.  Some of the packages listed below are redundant, but each should cover all bases.
+
+To install these additional packages, please open Terminal and type in the following one at a time:
+
+pip install bs4
+pip install pyserial
+pip install requests
+pip install retry
+pip install rpi.gpio
+pip install screen
+pip install timedelta
+pip install urllib3
+
+You will either see the packages install, or will get a message that the requested package is already satisfied.
+
+
+4 - Please make sure your Volpe board serial address is correct.
 
 To check, open Terminal and type:
 
 dmesg | grep tty
 
-...you should see something similar to: "ttyACM0: USB ACM device" within the outputted text.  ttyACM0 or ttyACM1, etc. - whatever it may be, is the correct address.  Please verify that the address on line 3 of the TT_port.py script (entered right after /dev/ ) matches.  The default address ttyACM0 .
+...you should see something similar to: "ttyACM0: USB ACM device" within the outputted text.  ttyACM0 or ttyACM1, etc. - whatever it may be, is the correct address.  Please verify that the address on line 3 of the TT_port.py script (entered right after /dev/ ) matches.  The default address ttyACM0 .  You may close Terminal when steps 3 and 4 are complete.
 
 
-4 - These scripts are made to work with a single 5v power relay board.  To make things work, please make sure you follow the directions for your setup below:
+5 - These scripts are made to work with a single 5v power relay board.  To make things work, please make sure you follow the directions for your setup below:
 
 If you have a relay - Please make sure the GPIO pin number is correct on line 6 in the RelayOn.py script and on line 8 in the RelayOff.py script.
 
@@ -67,7 +83,7 @@ Fun facts/ more info:
 
 *This script will automatically back off of the frequency of requests - for a time, if a variety of network error codes are received.
 
-*The script has a coded-in garbage collector.  With constant running, the small RAM space on some Raspberry Pis can get bogged down pretty fast - thus, the garbage collector freeing up a bit of space every 45 minutes.  If your Raspberry Pi begins to become unresponsive after running this script for a time - or if you get an error that the script was expecting something but instead got something else (numbers), it might be worth increasing the frequency of collection.  This will be a lower number (in minutes) on line 24, in the ittyWx.py script (current default is 30 minutes).
+*The script has a coded-in garbage collector.  With constant running, the small RAM space on some Raspberry Pis can get bogged down pretty fast - thus, the garbage collector freeing up a bit of space every 30 minutes.  If your Raspberry Pi begins to become unresponsive after running this script for a time - or if you get an error that the script was expecting something but instead got something else (numbers), it might be worth increasing the frequency of collection.  This will be a lower number (in minutes) on line 24, in the ittyWx.py script (current default is 45 minutes).
 
 *The alert bell system:  10 bells for a Warning; 5 for a Watch; and 4 for an Advisory, statement or anything else.
 
