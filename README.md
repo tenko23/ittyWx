@@ -37,16 +37,32 @@ i - Follow most of step A (above), except the line you will use will be 41 in th
 ii - Copy the entire link between the first set of quotation marks on line 41, in the ittyWx.py script and paste it - replacing the entire link between the quotation marks on line 3, in the requests.auth script.
 
 
-3 - Please make sure your Volpe board serial address is correct.
+3 - You will need to install additional packages onto your Raspberry Pi, in order for things to work properly.  Some of the packages listed below are redundant, but each should cover all bases.
+
+To install these additional packages, please open Terminal and type in the following one at a time:
+
+pip install bs4
+pip install pyserial
+pip install requests
+pip install retry
+pip install rpi.gpio
+pip install screen
+pip install timedelta
+pip install urllib3
+
+You will either see the packages install, or will get a message that the requested package is already satisfied.
+
+
+4 - Please make sure your Volpe board serial address is correct.
 
 To check, open Terminal and type:
 
 dmesg | grep tty
 
-...you should see something similar to: "ttyACM0: USB ACM device" within the outputted text.  ttyACM0 or ttyACM1, etc. - whatever it may be, is the correct address.  Please verify that the address on line 3 of the TT_port.py script (entered right after /dev/ ) matches.  The default address ttyACM0 .
+...you should see something similar to: "ttyACM0: USB ACM device" within the outputted text.  ttyACM0 or ttyACM1, etc. - whatever it may be, is the correct address.  Please verify that the address on line 3 of the TT_port.py script (entered right after /dev/ ) matches.  The default address ttyACM0 .  You may close Terminal when steps 3 and 4 are complete.
 
 
-4 - These scripts are made to work with a single 5v power relay board.  To make things work, please make sure you follow the directions for your setup below:
+5 - These scripts are made to work with a single 5v power relay board.  To make things work, please make sure you follow the directions for your setup below:
 
 If you have a relay - Please make sure the GPIO pin number is correct on line 6 in the RelayOn.py script and on line 8 in the RelayOff.py script.
 
@@ -55,23 +71,23 @@ If you do not have a relay or have an idle line motor control unit in place - Pl
 
 With this, you should be all ready to go!
 
-*The README.md and _config.yml files - after download, may be deleted... these are extra github files that are unnecessary.
+*The README.md and _config.yml files - after download, may be deleted... these are extra github files that are unnecessary.  The example_circuit_box_setup_photos folder may also be deleted.
 
 *The extra_scripts folder contains one script-each for manually turning on and off the 5v power relay on your Raspberry Pi (if equipped... this would come in handy if you wanted to manually type on your Teletype's keyboard or to run a tape reader, for example).  Please make sure the GPIO pin number is correct on line 6 in the ManRelayOn.py script and on line 8 in the ManRelayOff.py script.
 
-*if you downloaded the script(s) prior to May 5th, 2020, you will need to download the itty.py script again.  A critical fix has been made.
+*If you downloaded the script(s) prior to May 5th, 2020, you will need to download the itty.py script again.  A critical fix has been made. 
 
 
 
 Fun facts/ more info:
 
-*ittyWx.py is the main script to run, to get weather bulletins... the other files are support files.  The example_circuit_box_setup_photos folder may also be deleted.
+*ittyWx.py is the main script to run, to get weather bulletins... the other files are support files.
 
 *With a web scrape at every 3.7 seconds, it will keep you below the 1,000/hour threshold with the NWS (as long as you have an API key registered with them).  To decrease the frequency of scrapes, increase the number in parentheses on line 120 - in the ittyWx.py script, to anything above 3.7 (in seconds).
 
 *This script will automatically back off of the frequency of requests - for a time, if a variety of network error codes are received.
 
-*The script has a coded-in garbage collector.  With constant running, the small RAM space on some Raspberry Pis can get bogged down pretty fast - thus, the garbage collector freeing up a bit of space every 45 minutes.  If your Raspberry Pi begins to become unresponsive after running this script for a time - or if you get an error that the script was expecting something but instead got something else (numbers), it might be worth increasing the frequency of collection.  This will be a lower number (in minutes) on line 24, in the ittyWx.py script (current default is 45 minutes).
+*The script has a coded-in garbage collector.  With constant running, the small RAM space on some Raspberry Pis can get bogged down pretty fast - thus, the garbage collector freeing up a bit of space every 30 minutes.  If your Raspberry Pi begins to become unresponsive after running this script for a time - or if you get an error that the script was expecting something but instead got something else (numbers), it might be worth increasing the frequency of collection.  This will be a lower number (in minutes) on line 24, in the ittyWx.py script (current default is 45 minutes).
 
 *The alert bell system:  10 bells for a Warning; 5 for a Watch; and 4 for an Advisory, statement or anything else.
 
@@ -83,7 +99,7 @@ Fun facts/ more info:
 
 *Do not change the requests.auth script anymore than what is described above.  This API key script is very picky and may not work / may cause IP blocks, if changed in any other way.
 
-*This software is free to use... but please do consider a donation for the development of this software (and for any potential future software development geared towards Teletype).  Also, if any bugs are found, please contact me.
+*This software is free to use... but please do consider a donation for the development of this software (and for any potential future software development geared towards Teletype - PayPal donation button here: https://github.com/tenko23/ittyWx ).  Also, if any bugs are found, please contact me.
 
 *A special thank you to Faizan Mustafa for patiently working with me on the whole bit and getting these scripts exactly right, without even having a Teletype to test them on (Faizan)!
 
