@@ -1,4 +1,4 @@
-# ittyWx
+# ittyWx (obsolete)
 ***
 OBSOLETE -- Please see here for the newest version:
 https://github.com/tenko23/ittyWxV3
