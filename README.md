@@ -1,4 +1,12 @@
 # ittyWx
+***
+OBSOLETE
+Please see here for the newest version:
+https://github.com/tenko23/ittyWxV3
+
+***
+
+
 Internet Weather for Teletype
 
 
